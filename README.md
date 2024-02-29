@@ -1,38 +1,9 @@
-# Welcome to Remix!
+# Digital Canvas Foundation 
+501(c)(3) Nonprofit Organization
 
-- [Remix Docs](https://remix.run/docs)
+<h2>Where imagination takes flight</h2>
+<p>
+    At the Digital Canvas Foundation, we unlock the artistic potential of young minds (K-12) through after-school programs, scholarships, and connections to industry professionals, preparing them for future success in the creative and digital fields.
+</p>
 
-## Development
-
-From your terminal:
-
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+![Digital Canvas Foundation](https://res.cloudinary.com/jessebubble/image/upload/v1709245433/process-dotted_wmkoxw.svg)
