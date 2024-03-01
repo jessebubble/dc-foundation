@@ -15,7 +15,7 @@ import clsx from 'clsx';
 export function StickyContent() {
    return (
       <>
-         <div className="mt-24 sm:mt-32 lg:mt-40">
+         <div className="mt-24 sm:mt-32 lg:mt-40 py-24">
             <SectionIntro
                eyebrow="Our Foundation"
                title="Unlocking the creative potential of young minds"
@@ -23,8 +23,8 @@ export function StickyContent() {
             >
                <p>
                   The Digital Canvas Foundation empowers young minds (K-12)
-                  through after-school programs, scholarships, and industry
-                  connections
+                  through after-school programs, scholarships, and connections to industry professionals, 
+                  preparing them for future success in the creative and digital fields
                </p>
             </SectionIntro>
             <Container className="mt-16">
@@ -58,11 +58,20 @@ export function StickyContent() {
          </div>
 
          <div className="mb-24 mt-24 rounded-3xl bg-neutral-950 px-6 py-24 sm:mb-32 sm:mt-32 sm:py-32">
+         <SectionIntro
+               eyebrow="Our Impact"
+               title="Bridging the creative gap"
+               invert={true}
+            >
+               <p>
+                  Our flagship program, "Pixels & Possibilities," equips K-12 students with the tools and knowledge they need to excel in the world of digital art and design
+               </p>
+            </SectionIntro>
             <Container className="mt-16">
                <FadeIn>
                   <TracingBeam className="px-6 py-4">
                      <div className="relative pt-4 antialiased">
-                        {dummyContent.map((item, index) => (
+                        {foundationContent.map((item, index) => (
                            <div key={`content-${index}`} className="mb-10">
                               <h2 className="font-display mb-6 block px-4 py-2 text-base font-semibold text-centroPink lg:px-6 lg:py-0">
                                  {item.badge}
@@ -135,7 +144,7 @@ const TracingBeam = ({
    return (
       <motion.div
          ref={ref}
-         className={clsx('relative mx-auto h-full w-full max-w-4xl', className)}
+         className={clsx('relative', className)}
       >
          <div className="absolute -left-4 top-3 md:-left-20">
             <motion.div
@@ -166,7 +175,7 @@ const TracingBeam = ({
                            ? 'white'
                            : 'var(--emerald-600)',
                   }}
-                  className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
+                  className="h-2 w-2 rounded-full border border-neutral-300 bg-white"
                />
             </motion.div>
             <svg
@@ -221,17 +230,13 @@ const TracingBeam = ({
    );
 };
 
-const dummyContent = [
+const foundationContent = [
    {
-      title: 'Bridging the Creative Gap',
+      title: 'Where imagination takes flight',
       description: (
          <>
             <p>
-               Our flagship program, "
-               <strong className="text-white">Pixels & Possibilities</strong>,"
-               equips K-12 students with the tools and knowledge they need to
-               excel in the world of digital art and design. Led by passionate
-               instructors, students:
+               Led by passionate instructors, students:
                <ul className="pl-4">
                   <li>
                      Learn the fundamentals of Adobe Creative Cloud applications
@@ -280,7 +285,7 @@ const dummyContent = [
                <strong className="text-white">Eligibility Criteria:</strong>
                <ul className="pl-4">
                   <li>
-                     Students currently enrolled in grades 9-12 residing in San
+                     Students currently enrolled in grades K-12 residing in San
                      Antonio.
                   </li>
                   <li>
@@ -303,11 +308,10 @@ const dummyContent = [
       description: (
          <>
             <p>
-               The Digital Canvas Foundation program completely changed my
-               perspective on art. I went from drawing on notebooks to creating
-               intricate digital illustrations. The scholarship I received
-               allowed me to pursue my dream of attending art school, and I'm
-               forever grateful for the foundation's support
+            The Digital Canvas Foundation ignited a passion for art I never knew I had. 
+            Before, I was just doodling in notebooks. Now, I'm creating intricate digital illustrations that I never thought possible. 
+            Thanks to the foundation's support and guidance, I'm empowered to pursue my dream of a career in the creative field. 
+            I'm incredibly grateful for their impact on my life!
                <span className="mt-4 block text-neutral-500">
                   - Sarah M., Scholarship recipient (2023)
                </span>

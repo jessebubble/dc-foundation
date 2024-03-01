@@ -47,7 +47,7 @@ export function Header() {
                         <p className="text-base font-semibold text-white">
                            Digital Canvas{' '}
                            <span
-                              className="text-centroPink"
+                              className="text-centroPink block md:flex"
                               style={{
                                  animation:
                                     'rotate-gradient 5s linear infinite',
@@ -61,7 +61,7 @@ export function Header() {
                </div>
                <div className="flex items-center gap-6">
                   <HeaderMobile />
-                  <div className="hidden font-medium lg:flex lg:items-center lg:gap-4">
+                  <div className="hidden lg:font-medium lg:flex lg:items-center lg:gap-4">
                      <MovingButton borderRadius="1.75rem" className="">
                         Donate
                      </MovingButton>

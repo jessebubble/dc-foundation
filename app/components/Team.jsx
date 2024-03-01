@@ -5,22 +5,18 @@ import { SectionIntro } from '~/components/SectionIntro';
 
 export function Team() {
    return (
-      <div className="mb-24 mt-24 sm:mt-32 lg:mb-32">
+      <div className="mb-24 mt-24 py-24 sm:mt-32 ">
          <SectionIntro
-            eyebrow="Our Team"
-            title="Shaping the future, one digital masterpiece at a time"
+            eyebrow="Board of Directors"
+            title="Commited to responsible financial management and transparency"
             invert={false}
          >
             <p>
-               At the Digital Canvas Foundation, we unlock the artistic
-               potential of young minds (K-12) through after-school programs,
-               scholarships, and connections to industry professionals,
-               preparing them for future success in the creative and digital
-               fields{' '}
+               The Digital Canvas Foundation is a registered 501(c)(3) nonprofit organization
             </p>
          </SectionIntro>
          <Container className="mt-16">
-            <div className="space-y-24">
+            <div className="py-24 space-y-24">
                {team.map((group) => (
                   <FadeInStagger key={group.title}>
                      <Border as={FadeIn} invert={false} />
