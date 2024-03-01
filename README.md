@@ -1,4 +1,5 @@
-# Digital Canvas Foundation 
+# Digital Canvas Foundation
+
 501(c)(3) Nonprofit Organization
 
 <h2>Where imagination takes flight</h2>

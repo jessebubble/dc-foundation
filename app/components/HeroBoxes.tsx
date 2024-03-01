@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
+import { Link } from '@remix-run/react';
 
-export function PageIntro() {
+export function HeroBoxes() {
    return (
       <div className="">
-         <div className="relative flex h-[80vh] w-full flex-col items-center justify-center overflow-hidden bg-neutral-950 lg:h-screen">
+         <div className="relative flex h-[100vh] w-full flex-col items-center justify-center overflow-hidden bg-neutral-950">
             <div className="pointer-events-none absolute inset-0 z-20 h-full w-full bg-neutral-950 [mask-image:radial-gradient(transparent,white)]" />
 
             <Boxes />
@@ -12,20 +13,51 @@ export function PageIntro() {
                Digital Canvas{' '}
                <span
                   className="block"
-                  style={{
-                     background:
-                        'linear-gradient(180deg, #00b2a9 0%, #00b2a9 100%)',
-                     WebkitBackgroundClip: 'text',
-                     WebkitTextFillColor: 'transparent',
-                     backgroundClip: 'text',
-                  }}
+                  style={{ animation: 'rotate-gradient 5s linear infinite' }}
                >
                   Foundation
                </span>
             </h1>
-            <p className="relative z-20 mt-6 max-w-3xl text-balance text-center text-xl text-centroGreen">
+            <p className="relative z-20 mt-6 max-w-3xl text-balance text-center text-xl text-white">
                Nonprofit Organization
             </p>
+            <Link
+               to="/mission"
+               className="fixed bottom-4 right-4 z-50 text-center text-centroPink"
+            >
+               Learn More <span className="arrow">→</span>
+            </Link>
+            <style>
+               {`
+                  .arrow {
+                     transform: rotate(-45deg);
+                     display: inline-block;
+                  }
+       
+                  @keyframes rotate-gradient {
+                     0%, 100% {
+                        background: linear-gradient(to right in oklch, oklch(90% .3 230), oklch(70% .3 340));
+                        -webkit-background-clip: text;
+                        color: transparent;
+                     }
+                     25% {
+                        background: linear-gradient(to right in oklch, oklch(87% .4 142), oklch(100% .4 95));
+                        -webkit-background-clip: text;
+                        color: transparent;
+                     }
+                     50% {
+                        background: linear-gradient(to right in oklab, oklch(100% .25 160), oklch(75% .5 260));
+                        -webkit-background-clip: text;
+                        color: transparent;
+                     }
+                     75% {
+                        background: linear-gradient(to right in oklab, oklch(100% .4 95), oklch(55% .45 350));
+                        -webkit-background-clip: text;
+                        color: transparent;
+                     }
+                  }
+               `}
+            </style>
          </div>
       </div>
    );

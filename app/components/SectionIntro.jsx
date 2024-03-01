@@ -1,7 +1,6 @@
-import clsx from 'clsx';
-
 import { Container } from '~/components/Container';
 import { FadeIn } from '~/components/FadeIn';
+import clsx from 'clsx';
 
 export function SectionIntro({
    eyebrow,
@@ -20,7 +19,7 @@ export function SectionIntro({
                      <span
                         className={clsx(
                            'font-display mb-6 block text-base font-semibold',
-                           invert ? 'text-neutral-50' : 'text-neutral-950'
+                           invert ? 'text-white' : 'text-neutral-950'
                         )}
                      >
                         {eyebrow}
@@ -30,7 +29,7 @@ export function SectionIntro({
                )}
                <span
                   className={clsx(
-                     'font-display block text-balance tracking-tight',
+                     'font-display block tracking-tight [text-wrap:balance]',
                      smaller
                         ? 'text-2xl font-semibold'
                         : 'text-4xl font-medium sm:text-5xl',
@@ -43,7 +42,7 @@ export function SectionIntro({
             {children && (
                <div
                   className={clsx(
-                     'mt-6 text-xl text-balance',
+                     'mt-6 text-xl',
                      invert ? 'text-neutral-300' : 'text-neutral-600'
                   )}
                >

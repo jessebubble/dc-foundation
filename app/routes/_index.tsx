@@ -1,9 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
-import { StickyContent } from '~/components/StickyContent';
-import { Footer } from '~/components/Footer';
-import { Header } from '~/components/Header';
-import { PageIntro } from '~/components/PageIntro';
-import { Team } from '~/components/Team';
+import { HeroBoxes } from '~/components/HeroBoxes';
 
 export const meta: MetaFunction = () => {
    return [
@@ -19,11 +15,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
    return (
       <>
-         <Header />
-         <PageIntro />
-         <StickyContent />
-         <Team />
-         <Footer />
+         <HeroBoxes />
       </>
    );
 }

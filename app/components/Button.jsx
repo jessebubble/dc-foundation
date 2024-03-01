@@ -22,18 +22,18 @@ const variantStyles = {
 };
 
 export const Button = forwardRef(function Button(
-  { variant = 'solid', color = 'neutral', className, href, ...props },
-  ref
+   { variant = 'solid', color = 'neutral', className, href, ...props },
+   ref
 ) {
-  className = clsx(
-    baseStyles[variant],
-    variantStyles[variant][color],
-    className
-  )
+   className = clsx(
+      baseStyles[variant],
+      variantStyles[variant][color],
+      className
+   );
 
-  return href ? (
-    <Link ref={ref} to={href} className={className} {...props} />
-  ) : (
-    <button ref={ref} className={className} {...props} />
-  )
-})
+   return href ? (
+      <Link ref={ref} to={href} className={className} {...props} />
+   ) : (
+      <button ref={ref} className={className} {...props} />
+   );
+});

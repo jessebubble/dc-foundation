@@ -41,23 +41,60 @@ export function Header() {
          >
             <Container className="relative z-50 flex justify-between py-4">
                <div className="relative z-10 flex items-center">
-                  <Link href="/" aria-label="Home">
+                  <Link to="/" aria-label="Home" className="flex items-center">
                      <Logo className="h-10 w-auto" />
+                     <div className="ml-4">
+                        <p className="text-base font-semibold text-white">
+                           Digital Canvas{' '}
+                           <span
+                              className="text-centroPink"
+                              style={{
+                                 animation:
+                                    'rotate-gradient 5s linear infinite',
+                              }}
+                           >
+                              Foundation
+                           </span>
+                        </p>
+                     </div>
                   </Link>
                </div>
                <div className="flex items-center gap-6">
                   <HeaderMobile />
                   <div className="hidden font-medium lg:flex lg:items-center lg:gap-4">
-                     <MovingButton
-                        borderRadius="1.75rem"
-                        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800" 
-                     >
+                     <MovingButton borderRadius="1.75rem" className="">
                         Donate
                      </MovingButton>
                   </div>
                </div>
             </Container>
          </nav>
+         <style>
+            {`   
+               @keyframes rotate-gradient {
+                  0%, 100% {
+                     background: linear-gradient(to right in oklch, oklch(90% .3 230), oklch(70% .3 340));
+                     -webkit-background-clip: text;
+                     color: transparent;
+                  }
+                  25% {
+                     background: linear-gradient(to right in oklch, oklch(87% .4 142), oklch(100% .4 95));
+                     -webkit-background-clip: text;
+                     color: transparent;
+                  }
+                  50% {
+                     background: linear-gradient(to right in oklab, oklch(100% .25 160), oklch(75% .5 260));
+                     -webkit-background-clip: text;
+                     color: transparent;
+                  }
+                  75% {
+                     background: linear-gradient(to right in oklab, oklch(100% .4 95), oklch(55% .45 350));
+                     -webkit-background-clip: text;
+                     color: transparent;
+                  }
+               }
+            `}
+         </style>
       </header>
    );
 }
@@ -104,16 +141,16 @@ function HeaderMobile() {
                               className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-neutral-50 px-6 pb-6 pt-32 shadow-2xl shadow-neutral-900/20"
                            >
                               <div className="space-y-4">
-                                 <MobileNavLink href="#contact">
-                                    Contact us
-                                 </MobileNavLink>
                                  <MobileNavLink href="#form">
                                     Form 990
                                  </MobileNavLink>
                                  <MobileNavLink href="#annual-report">
                                     Annual Report
                                  </MobileNavLink>
-                                 <MobileNavLink href="#board">
+                                 <MobileNavLink href="#contact">
+                                    Contact Foundation
+                                 </MobileNavLink>
+                                 <MobileNavLink href="/board-of-directors">
                                     Board of Directors
                                  </MobileNavLink>
                               </div>
